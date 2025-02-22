@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class ZajecieFitness(models.Model):
     nazwa = models.CharField(max_length=100)
     instruktor = models.CharField(max_length=100)
