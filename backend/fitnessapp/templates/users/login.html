@@ -28,7 +28,8 @@
         <p class="text-center">Enter your credentials to log in.</p>
         <hr>
 
-        <form action="action_page.php" method="POST">
+        <form action="{% url 'lista_zajec' %}" method="POST">
+            {% csrf_token %}
             <div class="mb-3">
                 <label for="email" class="form-label"><b>Email</b></label>
                 <input type="email" class="form-control" placeholder="Enter Email" name="email" id="email" required>
@@ -43,7 +44,7 @@
         </form>
 
         <hr>
-        <p class="text-center">Don't have an account? <a href="register.html">Register here</a>.</p>
+        <p class="text-center">Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
     </div>
 
 </body>
